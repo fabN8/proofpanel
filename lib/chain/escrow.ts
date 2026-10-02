@@ -1,5 +1,5 @@
 /**
- * Saturday version: the budget is locked in the `study_escrow` program (see program/src/lib.rs).
+ * Escrow engine: the budget is locked in the `study_escrow` program (see program/src/lib.rs).
  * The program enforces: fixed reward, one payout per participant, remainder only to the researcher.
  *
  * The instructions are encoded by hand (8-byte Anchor discriminator + arguments) so this file

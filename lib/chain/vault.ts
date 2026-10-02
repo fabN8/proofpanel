@@ -1,5 +1,5 @@
 /**
- * Friday version: the study budget sits in a USDC account owned by a key that only the
+ * Vault engine: the study budget sits in a USDC account owned by a key that only the
  * platform can derive. Simple and real, but it relies on trusting the platform.
  * The escrow engine replaces this with rules enforced on-chain.
  */

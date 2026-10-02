@@ -83,10 +83,11 @@ export function NewStudyForm({ worldIdAvailable = false }: { worldIdAvailable?: 
         ) : null}
       </fieldset>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      {/* Short labels and bottom alignment keep the three boxes on one line even if a label wraps. */}
+      <div className="grid items-end gap-4 sm:grid-cols-3">
         <div>
           <label className={label} htmlFor="reward">
-            Reward per participant (USDC)
+            Reward (USDC)
           </label>
           <input id="reward" type="number" required min={0.01} max={100} step={0.01} value={reward} onChange={(e) => setReward(e.target.value)} className={`${inputClass} mt-1`} />
         </div>
@@ -98,7 +99,7 @@ export function NewStudyForm({ worldIdAvailable = false }: { worldIdAvailable?: 
         </div>
         <div>
           <label className={label} htmlFor="minutes">
-            Expected minutes
+            Minutes needed
           </label>
           <input id="minutes" type="number" required min={1} max={120} step={1} value={minutes} onChange={(e) => setMinutes(e.target.value)} className={`${inputClass} mt-1`} />
         </div>

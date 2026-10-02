@@ -43,3 +43,8 @@ next-env.d.ts
 # local database and keys
 /.data/
 !.env.example
+
+# files written by coding assistants; not part of the app
+/AGENTS.md
+/CLAUDE.md
+/Claude outputs/

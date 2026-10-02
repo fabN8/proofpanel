@@ -67,7 +67,7 @@ async function main() {
   const balances = { researcher: await engine.balanceOf(researcher.wallet), participant: await engine.balanceOf(participant.wallet) };
   console.log(`\nBalances: researcher ${formatUsdc(balances.researcher)} USDC, participant ${formatUsdc(balances.participant)} USDC`);
   const ok = balances.researcher === toBase(0.75) && balances.participant === toBase(0.25) && closed.refundedBase === toBase(0.25);
-  console.log(ok ? "RESULT: the whole loop works." : "RESULT: balances are not what was expected. Please send me this output.");
+  console.log(ok ? "RESULT: the whole loop works." : "RESULT: balances are not what was expected.");
   process.exit(ok ? 0 : 1);
 }
 
