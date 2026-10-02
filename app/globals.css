@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* The two typefaces are loaded in app/layout.tsx and arrive here as CSS variables. */
+@theme inline {
+  --font-sans: var(--font-text), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-heading), var(--font-text), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+/* The palette. Each name becomes a utility: bg-ink, text-mist, border-line and so on. */
+@theme {
+  --color-ink: #14162b;
+  --color-ink-soft: #1e2140;
+  --color-ink-line: #33375f;
+  --color-paper: #f7f6f2;
+  --color-card: #fdfcfa;
+  --color-line: #e4e2da;
+  --color-mist: #c9cbe0;
+  --color-lilac: #a9a4ff;
+  --color-tint: #ecebfb;
+  --color-tint-line: #d5d2f5;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+code,
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Keyboard users always see where they are. */
+:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
