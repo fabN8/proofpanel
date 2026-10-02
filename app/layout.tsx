@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { Header } from "@/components/Header";
 import { Providers } from "@/components/Providers";
@@ -41,7 +42,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <LogoMark className="h-6 w-6" />
                 <span className="font-display text-base font-semibold text-white">ProofPanel</span>
               </div>
-              <p className="text-sm">Hackathon prototype. Test network only. Do not enter personal data.</p>
+              <div className="flex flex-col gap-2 text-sm sm:items-end">
+                <p>Hackathon prototype. Test network and test money only.</p>
+                <nav className="flex gap-5" aria-label="Legal">
+                  <Link href="/impressum" className="text-white underline-offset-2 hover:underline">
+                    Impressum
+                  </Link>
+                  <Link href="/privacy" className="text-white underline-offset-2 hover:underline">
+                    Privacy notice
+                  </Link>
+                </nav>
+              </div>
             </div>
           </footer>
         </Providers>

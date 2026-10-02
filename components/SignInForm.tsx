@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { buttonClass, inputClass } from "./ui";
@@ -50,7 +51,12 @@ export function SignInForm({ next, cta = "Continue" }: { next?: string; cta?: st
       </button>
       {error ? <p className="text-sm text-rose-700">{error}</p> : null}
       <p className="text-xs text-slate-500">
-        Demo sign-in: no password and no email is sent. A Solana wallet is created for you in the background.
+        Demo sign-in: no password and no email is sent. A Solana wallet is created for you in the background. How your data is
+        used:{" "}
+        <Link href="/privacy" className="text-indigo-700 hover:underline">
+          privacy notice
+        </Link>
+        .
       </p>
     </form>
   );

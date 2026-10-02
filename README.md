@@ -215,6 +215,14 @@ shows the exact redirect link to paste into the tool.
 | Proof of the human check on-chain | Not built yet (planned with the Solana Attestation Service) |
 | Survey answers | Built-in survey: stored, shown on the study page ("Survey results") and included in the CSV export. External survey tool: the tool keeps them; match them to payouts with the `ref` column. |
 
+## Legal pages
+
+The footer links to `/impressum` and `/privacy`. The name, address and email shown there are in
+`lib/legal.ts`. The privacy notice lists outside services (Vercel, Neon, Privy, World ID, the Solana
+endpoint) only when they are switched on, so it describes the installation as it runs. If you change
+what the app stores or which services it uses, update `app/privacy/page.tsx` and the date in
+`lib/legal.ts`.
+
 ## Troubleshooting
 
 - `bigint: Failed to load bindings, pure JS will be used` is a harmless notice from a Solana

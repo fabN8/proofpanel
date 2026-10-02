@@ -1,6 +1,7 @@
 "use client";
 
 import { useLogin, usePrivy } from "@privy-io/react-auth";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { buttonClass } from "./ui";
@@ -76,6 +77,11 @@ export function PrivySignIn({ next, cta = "Sign in with email" }: { next?: strin
       ) : null}
       <p className="text-xs text-slate-500">
         You get a one-time code by email. A Solana wallet that only you control is created for you; rewards are paid to it.
+        How your data is used:{" "}
+        <Link href="/privacy" className="text-indigo-700 hover:underline">
+          privacy notice
+        </Link>
+        .
       </p>
     </div>
   );
