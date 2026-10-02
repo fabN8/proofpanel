@@ -7,6 +7,7 @@ email address, prove once that they are a real person, take the survey, and rece
 in their own wallet the moment the survey ends.
 
 - **Live demo:** https://proofpanel.vercel.app
+- **Escrow program on devnet:** [`9H58enMtdDK4HPDEwswG5FWRo6j9sswxxt83HZGXk8j4`](https://explorer.solana.com/address/9H58enMtdDK4HPDEwswG5FWRo6j9sswxxt83HZGXk8j4?cluster=devnet)
 - **Built for:** Build an MVP with Solana at WHU (Superteam Germany), October 2026
 
 > Status: hackathon prototype. It runs on the Solana test network (devnet) with test money only.
@@ -47,7 +48,9 @@ minimum time has passed and a place is still free.
 
 ### The escrow program
 
-`program/src/lib.rs` is an Anchor program, `study_escrow`, with three instructions:
+`program/src/lib.rs` is an Anchor program, `study_escrow`, deployed on devnet at
+[`9H58enMtdDK4HPDEwswG5FWRo6j9sswxxt83HZGXk8j4`](https://explorer.solana.com/address/9H58enMtdDK4HPDEwswG5FWRo6j9sswxxt83HZGXk8j4?cluster=devnet).
+It has three instructions:
 
 | Instruction | What it does |
 | --- | --- |
